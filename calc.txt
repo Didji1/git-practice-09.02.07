@@ -1,0 +1,50 @@
+def calculator():
+    print("=== Калькулятор ===")
+    print("Операции: +, -, *, /, **, %")
+    
+    while True:
+        try:
+            num1 = float(input("\nВведите первое число: "))
+            op = input("Введите операцию (+, -, *, /, **, %): ").strip()
+            num2 = float(input("Введите второе число: "))
+        except ValueError:
+            print("❌ Ошибка: введите корректное число!")
+            continue
+        
+        try:
+            if op == "+":
+                result = num1 + num2
+            elif op == "-":
+                result = num1 - num2
+            elif op == "*":
+                result = num1 * num2
+            elif op == "/":
+                if num2 == 0:
+                    print("❌ Деление на ноль невозможно!")
+                    continue
+                result = num1 / num2
+            elif op == "**":
+                result = num1 ** num2
+            elif op == "%":
+                if num2 == 0:
+                    print("❌ Деление на ноль невозможно!")
+                    continue
+                result = num1 % num2
+            else:
+                print("❌ Неизвестная операция!")
+                continue
+            
+            print(f"✅ Результат: {num1} {op} {num2} = {result}")
+        
+        except Exception as e:
+            print(f"❌ Ошибка: {e}")
+            continue
+        
+        again = input("\nПродолжить? (да/нет): ").strip().lower()
+        if again not in ("да", "yes", "y", "д"):
+            print("До свидания!")
+            break
+
+
+if __name__ == "__main__":
+    calculator()
