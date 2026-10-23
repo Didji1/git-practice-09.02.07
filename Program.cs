@@ -29,6 +29,9 @@ namespace ConsoleApp1
                 Console.WriteLine($"Результат деления: {divResult}");
             }
 
+            double result = num1 - num2;
+            Console.WriteLine($"Результат fdasd: {result}");
+
             Console.WriteLine($"Результат вычитания: {result}");
             double result = num1 / num2;
             Console.WriteLine($"Результат деления {result}");
