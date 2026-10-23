@@ -18,8 +18,15 @@ namespace ConsoleApp1
             Console.Write("Введите второе число: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
-            double result = num1 - num2;
-            Console.WriteLine($"Результат вычитания: {result}");
+            if (num2 == 0)
+            {
+                Console.WriteLine("Ошибка: Деление на ноль невозможно!");
+            }
+            else
+            {
+                double divResult = num1 / num2;
+                Console.WriteLine($"Результат деления: {divResult}");
+            }
 
 
             Console.ReadLine();
