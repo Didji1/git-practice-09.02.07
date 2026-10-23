@@ -19,8 +19,10 @@ namespace ConsoleApp1
             double num2 = Convert.ToDouble(Console.ReadLine());
 
             double result = num1 - num2;
-            //Console.WriteLine($"Результат : {num1} * {num2} = {result}");
+
             Console.WriteLine($"Результат вычитания: {result}");
+            double result = num1 / num2;
+            Console.WriteLine($"Результат деления {result}");
 
             Console.ReadLine();
         }
