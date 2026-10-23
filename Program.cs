@@ -18,8 +18,9 @@ namespace ConsoleApp1
             Console.Write("Введите второе число: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
-            double result = num1 * num2;
-            Console.WriteLine($"Результат: {num1} * {num2} = {result}");
+            double result = num1 - num2;
+            //Console.WriteLine($"Результат : {num1} * {num2} = {result}");
+            Console.WriteLine($"Результат вычитания: {result}");
 
             Console.ReadLine();
         }
